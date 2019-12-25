@@ -1,0 +1,35 @@
+
+version: "3.7"
+services:
+ nginx:
+  container_name: nginx
+  image: nginx
+  ports:
+  - target: 80
+    published: 80
+    protocol: tcp
+  volumes:
+  - type: bind
+    source: ./nginx.conf
+    target: /etc/nginx/nginx.conf
+  depends_on:
+  - service1
+  - service2
+  - service3
+  - service4
+ service1:
+  container_name: service1
+  image: service1
+  build: ./service1/
+ service2:
+  container_name: service2
+  image: service2
+  build: ./service2/
+ service3:
+  container_name: service3
+  image: service3
+  build: ./service3/
+ service4:
+  container_name: service4
+  image: service4
+  build: ./service4/
