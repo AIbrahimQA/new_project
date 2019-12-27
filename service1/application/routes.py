@@ -3,7 +3,7 @@ from application import app
 import requests
 import os
 
-buttons = ["Generate Password"]
+buttons = ["Generate Password", "Password Strength"]
 
 @app.route("/")
 def home():
@@ -14,6 +14,13 @@ def button0():
     res = requests.post( "http://service4:5000/getPassword" )
     if res.ok:
         session["password"] = res.json()["password"]
-        return render_template("home.html", title=title, buttons=buttons, password=session.get("password"))
+        return render_template("home.html", buttons=buttons, password=session.get("password"))
     return "request failed"
 
+@app.route("/getPassStrength", methods=["GET"])
+def button1():
+    res = requests.post( "http://service5:5000/getPassStrength", json={"password":session.get("password")} )
+    if res.ok:
+        return render_template("home.html", buttons=buttons, password=session.get("password"), strength="This password is a "+res.json()["strength"] )
+
+    return "request failed"

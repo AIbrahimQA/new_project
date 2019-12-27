@@ -2,6 +2,10 @@
 {% extends "layout.html" %}
 {% block body %}
         <button id="{{ buttons[0] }}" onclick="window.location.href='{{ url_for("button0") }}'">{{ buttons[0] }} </button>
-        <p>Password: {{ password }}</p>
+      	<button id="{{ buttons[1] }}" onclick="window.location.href='{{ url_for("button1") }}'">{{ buttons[1] }} </button>
+
+
+	<p>Password: {{ password }}</p>
+	<p>{{ strength }}</p>
 {% endblock %}
 

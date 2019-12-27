@@ -17,6 +17,7 @@ services:
   - service2
   - service3
   - service4
+  - service5
  service1:
   container_name: service1
   image: service1
@@ -33,3 +34,7 @@ services:
   container_name: service4
   image: service4
   build: ./service4/
+ service5:
+  container_name: service5
+  image: service5
+  build: ./service5/
