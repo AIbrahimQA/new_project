@@ -22,6 +22,12 @@ services:
   container_name: service1
   image: service1
   build: ./service1/
+  environment:
+  - MYSQL_DB=${MYSQL_DB}
+  - MYSQL_HOST=${MYSQL_HOST}
+  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  - MYSQL_USER=${MYSQL_USER}
+
  service2:
   container_name: service2
   image: service2
