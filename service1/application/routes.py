@@ -1,5 +1,6 @@
 from flask import request, render_template, session
-from application import app
+from application import app, db
+from application.models import Passwords 
 import requests
 import os
 
@@ -14,6 +15,13 @@ def button0():
     res = requests.post( "http://service4:5000/getPassword" )
     if res.ok:
         session["password"] = res.json()["password"]
+        pass1 = Passwords(password=session.get("password"))
+        db.session.add(pass1)
+        db.session.commit()
+    
+
+
+
         return render_template("home.html", buttons=buttons, password=session.get("password"))
     return "request failed"
 
