@@ -5,8 +5,8 @@ pipeline{
                 stage('--deploy--'){
                         steps{
                                 sh '''ssh -T 34.89.80.253 << BOB
-                                      cd passwordgen/
-                                      git pull
+				      git clone https://github.com/AIbrahimQA/new_project.git
+                                      cd new_project/
                                       docker-compose up -d --build
                                       '''
                         }
