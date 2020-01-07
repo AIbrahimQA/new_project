@@ -7,5 +7,5 @@ import string
 
 @app.route("/getDigits", methods=["POST"])
 def getDigits():
-    return {"digits":string.digits}
+    return {"digits":random.choice(string.digits)}
 
