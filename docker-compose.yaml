@@ -5,7 +5,7 @@ services:
   container_name: nginx
   image: nginx
   ports:
-  - target: 81
+  - target: 80
     published: 80
     protocol: tcp
   volumes:
