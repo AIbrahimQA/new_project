@@ -15,7 +15,7 @@ def getPassword():
     randomDigit = requests.post( "http://service2:5000/getDigits" )
     randomLetter = requests.post( "http://service3:5000/getLetter" )
 
-    characters = str(randomDigit) + str(randomLetter)
+    characters = int(randomDigit) + str(randomLetter)
     password = ''.join(choice(characters) for x in range(randint(10, 18))) 
     
 
