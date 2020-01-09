@@ -4,7 +4,7 @@ from application.models import Passwords
 import requests
 import os
 
-buttons = ["Generate Password", "Password Strength"]
+buttons = ["Generate Password", "Password Strength", "Generate Random Number", "Generate Random Letter"]
 
 @app.route("/")
 def home():
@@ -32,3 +32,21 @@ def button1():
         return render_template("home.html", buttons=buttons, password=session.get("password"), strength="This password is a "+res.json()["strength"] )
 
     return "request failed"
+
+
+@app.route("/getDigits", methods=["GET"])
+def button2():
+    res = requests.post( "http://service2:5000/getDigits", json={"password":session.get("password")} )
+    if res.ok:
+        return render_template("home.html", buttons=buttons, password=session.get("password"), digits=res.json()["digits"] )
+
+    return "request failed"
+    
+
+
+@app.route("/getLetter", methods=["GET"])
+def button3():
+    res = requests.post( "http://service3:5000/getLetter", json={"password":session.get("password")})
+    if res.ok:
+        return render_template("home.html", buttons=buttons, password=session.get("password"), letter=res.json()["letter"])
+    return "request failed"   

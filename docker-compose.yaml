@@ -5,8 +5,8 @@ services:
   container_name: nginx
   image: nginx
   ports:
-  - target: 80
-    published: 80
+  - target: 81
+    published: 81
     protocol: tcp
   volumes:
   - type: bind
@@ -20,27 +20,28 @@ services:
   - service5
  service1:
   container_name: service1
-  image: service1
+  image: 127.0.0.1:5000/service1
   build: ./service1/
   environment:
-  - MYSQL_DB=${MYSQL_DB}
-  - MYSQL_HOST=${MYSQL_HOST}
-  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
   - MYSQL_USER=${MYSQL_USER}
+  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  - MYSQL_HOST=${MYSQL_HOST}
+  - MYSQL_DB=${MYSQL_DB}
+  - MYSQL_KEY=${MYSQL_KEY}
 
  service2:
   container_name: service2
-  image: service2
+  image: 127.0.0.1:5000/service2
   build: ./service2/
  service3:
   container_name: service3
-  image: service3
+  image: 127.0.0.1:5000/service3
   build: ./service3/
  service4:
   container_name: service4
-  image: service4
+  image: 127.0.0.1:5000/service4
   build: ./service4/
  service5:
   container_name: service5
-  image: service5
+  image: 127.0.0.1:5000/service5
   build: ./service5/
