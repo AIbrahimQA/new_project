@@ -1,2 +1,2 @@
 # new_project
-# Password Generator Application
+# Random Password Generator Application
