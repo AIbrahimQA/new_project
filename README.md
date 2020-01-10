@@ -1,2 +1,2 @@
 
-# Second Project: Random Password Generator Application.
+# Second Project
