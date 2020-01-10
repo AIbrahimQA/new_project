@@ -8,6 +8,7 @@ pipeline{
                         steps{
                                 sh '''ssh 35.246.0.219  << BOB
 				source ~/.bashrc
+				cd new_project/
 				docker-compose build
                                 docker-compose push
 				
