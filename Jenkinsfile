@@ -25,7 +25,9 @@ pipeline{
 				git clone https://github.com/AIbrahimQA/new_project.git
 			        cd new_project/
 				git pull
-				docker stack deploy --compose-file docker-compose.yaml passgen
+				docker service update --replicas 5 passgen_service3
+				docker service update --force passgen_service3
+				
                                 
                                 '''
                         }
