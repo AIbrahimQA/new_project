@@ -30,7 +30,7 @@ pipeline{
 				docker-compose down --volumes
 				docker-compose push
 				docker stack deploy --compose-file docker-compose.yaml passgen
-				docker service update --replicas 5 passgen_service3
+				docker service update --replicas 2 passgen_service3
 				docker service update --force passgen_service3
                                 
                                 '''
