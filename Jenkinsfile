@@ -25,7 +25,6 @@ pipeline{
 				git clone https://github.com/AIbrahimQA/new_project.git
 			        cd new_project/
 				docker service update --replicas 2 passgen_service3
-				docker service update --force passgen_service3
 				docker service update --image 127.0.0.1:5000/service3:latest passgen_service3 
                                 '''
                         }
