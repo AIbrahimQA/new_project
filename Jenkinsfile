@@ -10,7 +10,7 @@ pipeline{
                                 docker stop $(docker ps -qa)
                                 docker rm $(docker ps -qa)
                                 docker rmi -f $(docker images -a -q)
-                                rm-rf new_project/
+                                rm -rf new_project/
 				'''
 
                         }
