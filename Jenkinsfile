@@ -24,11 +24,9 @@ pipeline{
                                 sh '''ssh 35.246.0.219  << BOB      		
 				git clone https://github.com/AIbrahimQA/new_project.git
 			        cd new_project/
-				git pull
-				docker service update --replicas 5 passgen_service3
+				docker service update --replicas 2 passgen_service3
 				docker service update --force passgen_service3
 				
-                                
                                 '''
                         }
                 }
