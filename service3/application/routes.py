@@ -7,6 +7,6 @@ import string
 
 @app.route("/getLetter", methods=["POST"])
 def getLetter():
-    return {"letter":random.choice(string.digits)}
+    return {"letter":random.choice(string.ascii_lowercase)}
 
 
