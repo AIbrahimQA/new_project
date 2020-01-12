@@ -8,7 +8,7 @@ pipeline{
                         steps{
                                 sh ''' 
 				. ~/.bashrc
-				cd new_project/
+		
 				docker-compose build
                                 docker-compose push
 				
