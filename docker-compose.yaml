@@ -20,7 +20,7 @@ services:
   - service5
  service1:
   container_name: service1
-  image: project2-jenkins:5000/service1
+  image: 34.89.80.253:5000/service1
   build: ./service1/
   environment:
   - MYSQL_USER=${MYSQL_USER}
@@ -31,17 +31,17 @@ services:
 
  service2:
   container_name: service2
-  image: project2-jenkins:5000/service2
+  image: 34.89.80.253:5000/service2
   build: ./service2/
  service3:
   container_name: service3
-  image: project2-jenkins:5000/service3:build-${BUILD_NUMBER} 
+  image: 34.89.80.253:5000/service3:build-${BUILD_NUMBER} 
   build: ./service3/
  service4:
   container_name: service4
-  image: project2-jenkins:5000/service4
+  image: 34.89.80.253:5000/service4
   build: ./service4/
  service5:
   container_name: service5
-  image: project2-jenkins:5000/service5
+  image: 34.89.80.253:5000/service5
   build: ./service5/
