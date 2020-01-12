@@ -7,7 +7,7 @@ pipeline{
                 stage('--initialise--'){
                         steps{
                                 sh ''' 
-				source ~/.bashrc
+				. ~/.bashrc
 				cd new_project/
 				docker-compose build
                                 docker-compose push
