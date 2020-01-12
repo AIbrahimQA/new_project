@@ -21,7 +21,7 @@ pipeline{
                             
                 stage('--deploy--'){
                         steps{
-                                sh '''35.246.107.87   << BOB      		
+                                sh ''' ssh 35.246.107.87  << BOB      		
 				export BUILD_NUMBER='${BUILD_NUMBER}'
                                 git clone https://github.com/AIbrahimQA/new_project.git
 			        cd new_project/
