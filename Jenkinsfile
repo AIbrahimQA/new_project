@@ -8,7 +8,6 @@ pipeline{
                         steps{
                                 sh ''' 
 				. ~/.bashrc
-				cd new_project
 				git pull
 				docker-compose build
                                 docker-compose push
