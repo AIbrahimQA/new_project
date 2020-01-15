@@ -1,6 +1,18 @@
 # Second Project
 https://docs.google.com/presentation/d/1F9Cj21d4B0wxGYmhfD27b4M9m87nle87fw-SpfpZsS0/edit#slide=id.g6c29b958af_0_83
 
+
+
+
+Installation
+-------------
+
+Create SQL Instance and create a table to represent the models page.
+Put Environmental Variable into .bashrc and source it .
+Git clone the Repo down. 
+Then Docker-compose up --build to run it. 
+Make sure all ports in docker compose file and nginx are configured correctly. 
+
 Solo Project 2 : Random password generator
 
 The contents:
