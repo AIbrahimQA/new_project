@@ -13,6 +13,8 @@ Git clone the Repo down.
 Then Docker-compose up --build to run it. 
 Make sure all ports in docker compose file and nginx are configured correctly. 
 
+-------------------------------------------------
+
 Solo Project 2 : Random password generator
 
 The contents:
