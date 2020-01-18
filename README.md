@@ -83,12 +83,12 @@ Solo Project 2 : Random password generator
 - Docker Swarm
 - Docker Stack
 
-# Risk Assesment Chart 
+# Risk Assessment Chart 
 
 ![alt text](https://github.com/AIbrahimQA/new_project/blob/master/documentation/Risk%20Assesment%20Screenshot%20for%20md.png)
 
  
-# Risk Assesment Statements 
+# Risk Assessment Statements 
 
 Poor Planning:
 With poor planning there may be a low likelihood of it occurring but if it happened then the impact would be very high the project. Having poor planning would be a major danger to the project. So to combat this I used trello to make sure all requirements are down and all major goals are planned out.
@@ -146,6 +146,6 @@ Ahmed Ibrahim
 
 # Acknowledgements
 - The rest of the cohorts on the programme
-- QA Consulting team and instructors for providing key skills to complete this project.
+- QA Consulting team and instructors for providing the key skills needed to complete this project.
 
 
