@@ -3,9 +3,8 @@ https://docs.google.com/presentation/d/1F9Cj21d4B0wxGYmhfD27b4M9m87nle87fw-SpfpZ
 
 
 
-
-Installation
--------------
+## Installation
+```bash
 
 Create SQL Instance and create a table to represent the models page.
 Put Environmental Variable into .bashrc and source it .
@@ -13,59 +12,83 @@ Git clone the Repo down.
 Then Docker-compose up --build to run it. 
 Make sure all ports in docker compose file and nginx are configured correctly. 
 
+```
 -------------------------------------------------
 
 Solo Project 2 : Random password generator
 
-The contents:
+# The contents:
 
-Solo Project 2
-Requirements
-Application Use
-Planning
-Configuration
-CI Pipeline
-Summary
-Requirements:
+- Solo Project 2
+- Requirements
+- Application Use
+- Planning
+- Configuration
+- CI Pipeline
+- Summary
+- Requirements:
 
-Trello Board
-Functional Python application with testing
-Front-end website using Flask
-Configuration Management: Ansible
-Integration with Version Control System
-Containerisation: Docker
-Deployed by CI Server
-Documentation
+# Requirements
 
-CI Pipeline -Jenkins – Rolling Update
+- Trello Board
+- Functional Python application with testing
+- Front-end website using Flask
+- Configuration Management: Ansible
+- Integration with Version Control System
+- Containerisation: Docker
+- Deployed by CI Server
+- Documentation
 
-Github commit
-1.	Webhook triggered
-2.	Jenkins starts pipeline
-3.	Build and push on Jenkins machine
-4.	SSH to swarm machine
-5.	Cd to project location
-6.	Git pull
-7.	Docker Service update image
+# Application Use
 
+![alt text](https://github.com/AIbrahimQA/new_project/blob/master/documentation/User%20case.png)
 
-Technologies Used:
+# Service Architecture
 
-Trello
-Google Console Platform
-Python
-Flask
-Version Control – Git
-CI Server – Jenkins
-Ansible
-Docker
-Docker Swarm
-Docker Stack
+![alt text](https://github.com/AIbrahimQA/new_project/blob/master/documentation/Service%20architecture.jpg)
 
 
+# Planning - Trello
+# Before
+
+![alt text](https://github.com/AIbrahimQA/new_project/blob/master/documentation/Before%20Trello.png)
+
+# After
+
+![alt text](https://github.com/AIbrahimQA/new_project/blob/master/documentation/Trello%20Board%20-%20After.png)
+
+
+# CI Pipeline -Jenkins – Rolling Update
+
+- Github commit
+-	Webhook triggered
+-	Jenkins starts pipeline
+-	Build and push on Jenkins machine
+-	SSH to swarm machine
+-	Cd to project location
+- Git pull
+-	Docker Service update image
+
+
+# Technologies Used:
+
+- Trello
+- Google Console Platform
+- Python
+- Flask
+- Version Control – Git
+- CI Server – Jenkins
+- Ansible
+- Docker
+- Docker Swarm
+- Docker Stack
+
+# Risk Assesment Chart 
+
+![alt text](https://github.com/AIbrahimQA/new_project/blob/master/documentation/Risk%20Assesment%20Screenshot%20for%20md.png)
 
  
-Risk Assessment
+# Risk Assesment Statements 
 
 Poor Planning:
 With poor planning there may be a low likelihood of it occurring but if it happened then the impact would be very high the project. Having poor planning would be a major danger to the project. So to combat this I used trello to make sure all requirements are down and all major goals are planned out.
@@ -101,19 +124,28 @@ Documentation is very important so not having sufficient documentation would hav
 
 
 
-Summary
+# Summary
 
-Positives
+# Positives
 
-CI Pipeline
-Ansible Playbook
-Docker Stack Deploy
-Rolling Update
+- CI Pipeline
+- Ansible Playbook
+- Docker Stack Deploy
+- Rolling Update
 
-Improvements
+# Improvements
 
-Add more tests
-Add testing to CI Pipeline
-Update all images for rolling update.
+- Add more tests
+- Add testing to CI Pipeline
+- Update all images for rolling update.
+
+# Author
+
+Ahmed Ibrahim
+
+
+# Acknowledgements
+- The rest of the cohorts on the programme
+- QA Consulting team and instructors for providing key skills to complete this project.
 
 
