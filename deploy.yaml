@@ -31,11 +31,11 @@ spec:
       - name: passwordgen
         image: gcr.io/speedy-victory-198818/passwordgen
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
         readinessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 5000
 
 ---
 apiVersion: v1
@@ -48,5 +48,5 @@ spec:
   ports: 
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 5000
   type: LoadBalancer
